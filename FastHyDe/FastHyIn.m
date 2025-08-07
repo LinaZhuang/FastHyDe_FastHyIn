@@ -61,7 +61,9 @@ function [image_fasthyde, time] = FastHyDe(img_ori, M,  noise_type, iid, k_subsp
 % of this software or its fitness for any particular purpose."
 % ---------------------------------------------------------------------
 
+img_ori = double(img_ori); % Input must be double (not single) to avoid potential NaNs during computation %update on Aug. 2025
 [image_fasthyde, time] = FastHyIn_core(img_ori, M,  noise_type, iid, k_subspace);
+
 
 
 end
