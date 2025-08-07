@@ -57,7 +57,8 @@ function [image_fasthyde, time] = FastHyDe(img_ori,  noise_type, iid, k_subspace
 
 
  
-
+img_ori = double(img_ori); % Input must be double (not single) to avoid potential NaNs during computation %update on Aug. 2025
 [image_fasthyde, time] = FastHyDe_core(img_ori,  noise_type, iid, k_subspace);
+
 
 end
